@@ -37,7 +37,6 @@ p, h1, h2 {
 /*Add borders around the main components and some
 space too*/
 header, nav, main, h1, footer{
-	border: 2px solid grey;
 	margin: 10px 0;
 }
 
@@ -47,13 +46,21 @@ items in the nav section*/
 nav li{
 	background-color: #e0e0e0;
 	padding:10px;
-	width:25%;
 	border:1px solid black;
-	display: inline-block;
-	width: 20%;
+	/* display: inline-block; */
+}
+
+.navflex{
+display: flex;
+flex-direction: column;
+text-align: center;
 }
 
 
+.current{
+    text-transform: uppercase;
+    border: solid crimson;
+}
 
 /*Added this so the links stay the same color*/
 a:visited{color:#0000FF}
@@ -187,3 +194,10 @@ input[type=text], select, textarea {
     height: 100%;
     object-fit: cover;
 }
+
+@media screen and (min-width: 758px){
+	.navflex{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	}
