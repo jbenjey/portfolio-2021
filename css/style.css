@@ -50,6 +50,23 @@ nav li{
 	/* display: inline-block; */
 }
 
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
 .navflex{
 display: flex;
 flex-direction: column;
@@ -194,8 +211,19 @@ input[type=text], select, textarea {
     height: 100%;
     object-fit: cover;
 }
+.grid-container__img:hover{
+	opacity: .3;
+}
 
+
+/* tablet view */
 @media screen and (min-width: 758px){
+	.navflex{
+		flex-direction: row;
+	}
+	}
+/* alt desktop view */
+@media screen and (min-width: 1050px){
 	.navflex{
 		flex-direction: row;
 		justify-content: space-between;
