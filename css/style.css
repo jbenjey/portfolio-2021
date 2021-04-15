@@ -150,7 +150,7 @@ input[type=text], select, textarea {
   
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
-	background-color: #4CAF50;
+	background-color: #4aa564;
 	color: white;
 	padding: 12px 20px;
 	border: none;
@@ -229,3 +229,34 @@ input[type=text], select, textarea {
 		justify-content: space-between;
 	}
 	}
+
+#img{
+	animation-name: img_grow;
+	animation-duration: 15s;
+		/*Your code here.*/
+	
+	}
+	
+	/*Keyframes for animation*/
+	@-webkit-keyframes img_grow{
+	/*Your code here.*/
+	from {width: 25px; opacity: 0;}
+	to {width: 420px; opacity: 1;}
+	
+	}
+	
+	@keyframes img_grow{
+	/*Your code here.*/
+	from {width: 25px; opacity: 0;}
+	to {width: 420px; opacity: 1;}
+	
+	}
+	
+	@media screen and (prefers-reduced-motion: reduce){
+		#img{
+		 animation: none;
+		}
+		#grid-container__img:hover{ 
+		transform: none;
+		}
+		}
